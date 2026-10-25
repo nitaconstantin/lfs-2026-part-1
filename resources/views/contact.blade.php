@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-</head>
-
-<body>
+<x-layout>
     <h1>Contact us</h1>
-    <a href="/">
-        Back Home
-    </a>
-    <a href="/about">
-        About us
-    </a>
-</body>
-
-</html>
+    <x-card class="max-w-400">
+        This is a placeholder for your form.
+    </x-card>
+</x-layout>
