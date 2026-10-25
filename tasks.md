@@ -28,6 +28,14 @@ Homework
 
 
 
+### **Pass data to views**
+
+1. pass the first data to your view V
+2. read the person name from the query string V
+3. override the situation where you don't write a name  for a person, and show a default message V
+
+
+
 
 
 
