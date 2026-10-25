@@ -8,26 +8,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $title }}</title>
-    <style>
-        .max-w-400 {
-            max-width: 400px;
-            margin: auto
-        }
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-        .card {
-            background: #e3e3e3;
-            padding: 1rem;
-            text-align: center
-        }
-    </style>
+
 </head>
 
-<body>
-    <nav>
+<body class="bg-gray-700 p-6 max-w-xl mx-auto">
+    {{-- <nav>
         <a href="/">Home</a>
         <a href="/about">About us</a>
         <a href="/contact">Contact us</a>
-    </nav>
+    </nav> --}}
     <main>
         {{ $slot }}
     </main>

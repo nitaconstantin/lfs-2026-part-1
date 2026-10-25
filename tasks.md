@@ -36,7 +36,32 @@ Homework
 
 
 
+### **Blade directives**
 
+1. show the values which an array includes, using dd function V
+2. verify if you have any tasks, using the blade directive V
+3. show each of your tasks which are in your tasks array V
+4. show a message when the array is empty @dd($tasks) V
+
+
+
+### **Forms**
+
+1. rename the welcome view to ideas V
+2. be careful with your route after that V
+3. install tailwind using a cdn and use their snippet for a textarea V
+4. add a new background to your project(bg-gray-700) V
+5. add also some styles to your body(p-6, max-w-xl, mx-auto) V
+6. override the default get request for a form, using a post request V
+7. change also the url for your form V
+8. resolve the error V
+9. create a new route for submitting the form V
+10. show the data you've passed to the form V
+11. put that idea into the session and then redirect to / V
+12. change the ideas variables with your newly session value V
+13. pass those ideas to your view V
+14. Create a route which delete your ideas from session V
+15. render the ideas array and title only if there are some ideas into your array V
 
 
 
