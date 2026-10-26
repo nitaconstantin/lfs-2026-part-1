@@ -30,7 +30,7 @@
             <h3 class="font-bold">Your Ideas</h3>
             <ul>
                 @foreach ($ideas as $idea)
-                    <li class="text-sm">{{ $idea }}</li>
+                    <li class="text-sm">{{ $idea->description }}</li>
                 @endforeach
             </ul>
         @else

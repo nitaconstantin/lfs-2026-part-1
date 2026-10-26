@@ -65,5 +65,27 @@ Homework
 
 
 
+### **Databases, Migrations and Eloquent**
+
+1. create your first migration (create\_ideas\_table) V
+2. in your new created migration add a text description V
+3. run your new migration V
+4. now get your ideas from your newly created database using DB facades V
+5. change your view to show the correctly values of each idea V
+6. add a state column to your newly created table V
+7. after adding your new column run the php artisan migrate:refresh command V
+8. create a new migration 'add\_state\_to\_ideas\_table' V
+9. after you've created your new migration be careful to drop that column in your file V
+10. run the php artisan migrate:fresh V
+11. create a model(Idea) V
+12. in your route change the $ideas variable, to point to your Model V
+13. add protected guarded to your newly model V
+14. show only the pending ideas V
+15. create a complex eloquent query using Idea::query()->where()
+
+
+
+
+
 
 

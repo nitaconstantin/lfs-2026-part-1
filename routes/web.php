@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Idea;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -19,9 +21,18 @@ use Illuminate\Support\Facades\Route;
 // Route::view('/', 'welcome');
 
 Route::get('/', function(){
+    // $ideas = DB::table('ideas')->get();
+    // $ideas = Idea::all();
+    // $ideas = Idea::where('state', 'pending')->get();
+    $ideas = Idea::query()
+            ->when(request('state'), function($query, $state){
+                $query->where('state', $state);
+               
+            })
+            ->get();
     return view('ideas', [
        
-        'ideas' => session()->get('ideas', []),
+        'ideas' => $ideas,
     ]);
 });
 
