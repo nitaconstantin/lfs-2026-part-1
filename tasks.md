@@ -110,3 +110,16 @@ Homework
 21. include also a button to delete the idea V
 22. to make things work properly you have to create a new form and connect your newly created button to your form V
 
+
+
+### **Controllers**
+
+1. create a new route for create idea and also move the store route below the create route
+2. create also the create view duplicating the index view
+3. after you've created the newly create view you can delete the form from your index view
+4. if you don't have any ideas yet show a message and also show a link which points to your newly create view
+5. verify if you have seven resourceful action
+6. create your first  resource controller named IdeaController
+7. add also the corresponding model for your newly created controller
+8. modify your routes to points to your methods which are inside your Idea Controller
+
