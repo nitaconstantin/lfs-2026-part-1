@@ -10,9 +10,9 @@
     <form action="/ideas" method="POST">
         @csrf
         <div class="col-span-full">
-            <label for="idea" class="block text-sm/6 font-medium text-white">New Idea</label>
+            <label for="description" class="block text-sm/6 font-medium text-white">New Idea</label>
             <div class="mt-2">
-                <textarea class="text-white block w-full rounded-md bg-white/5 px-3" name="idea" id="idea" rows="5"></textarea>
+                <textarea class="text-white block w-full rounded-md bg-white/5 px-3" name="description" id="description" rows="5"></textarea>
             </div>
             <p class="mt-3 text-sm/6 text-gray-400">
                 Have an idea you want to save for later?

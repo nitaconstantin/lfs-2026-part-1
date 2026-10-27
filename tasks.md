@@ -85,7 +85,28 @@ Homework
 
 
 
+### **HTTP Requests and REST**
 
-
-
+1. change your $ideas variable to grab everything V
+2. update home page to be the /ideas V
+3. change your delete-ideas to point to Idea::truncate() not the session value V
+4. create a new route for a single idea V
+5. find the corresponding id V
+6. create a new ideas directory that matches  and create all routes for the newly created directory V
+7. change the route view for all of the routes V
+8. create a show page V
+9. create an idea check and if it doesn't exist abort to 404 V
+10. change the function find to find or fail and erase the if statement V
+11. use the route binding model to recreate the idea variable V
+12. create a new edit route V
+13. create also the view using the index template V
+14. be careful at your action and also at your method after you created your new edit view V
+15. create new route for your update method V
+16. in your update route you have to update the value of your field V
+17. add a redirect to your ideas.show page V
+18. be careful at your input name V
+19. create also a delete route
+20. in your show page add a button to edit the current idea - use a style already used
+21. include also a button to delete the idea V
+22. to make things work properly you have to create a new form and connect your newly created button to your form V
 
