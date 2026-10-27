@@ -6,6 +6,13 @@
             <div class="mt-2">
                 <textarea class="text-white block w-full rounded-md bg-white/5 px-3" name="description" id="description" rows="5"></textarea>
             </div>
+            {{-- @if ($errors->has('description'))
+                <p class="text-sm text-red-500 mt-1">{{ $errors->first('description') }}</p>
+            @endif --}}
+            {{-- @error('description')
+                <p class="text-sm text-red-500 mt-1">{{ $message }}</p>
+            @enderror --}}
+            <x-forms.error name="description" />
             <p class="mt-3 text-sm/6 text-gray-400">
                 Have an idea you want to save for later?
             </p>

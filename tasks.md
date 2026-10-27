@@ -114,12 +114,22 @@ Homework
 
 ### **Controllers**
 
-1. create a new route for create idea and also move the store route below the create route
-2. create also the create view duplicating the index view
-3. after you've created the newly create view you can delete the form from your index view
-4. if you don't have any ideas yet show a message and also show a link which points to your newly create view
-5. verify if you have seven resourceful action
-6. create your first  resource controller named IdeaController
-7. add also the corresponding model for your newly created controller
-8. modify your routes to points to your methods which are inside your Idea Controller
+1. create a new route for create idea and also move the store route below the create route V
+2. create also the create view duplicating the index view V
+3. after you've created the newly create view you can delete the form from your index view V
+4. if you don't have any ideas yet show a message and also show a link which points to your newly create view V
+5. verify if you have seven resourceful action V
+6. create your first  resource controller named IdeaController V
+7. add also the corresponding model for your newly created controller V
+8. modify your routes to points to your methods which are inside your Idea Controller V
+
+
+
+### **Request Validation**
+
+1. for your store method, first you have to validate your inputs and after the inputs are validated, you can create a new idea V
+2. displaying validation error V
+3. after you check if there id an error for your description, used the error blade directive to show your error V
+4. create a new component error.blade.php V
+5. create a new forms folder in your components folder and add your newly created error component V
 
