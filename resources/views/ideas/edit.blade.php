@@ -15,6 +15,7 @@
                 <textarea class="text-white block w-full rounded-md bg-white/5 px-3" name="description" id="description" rows="5">
 {{ $idea->description }}
                 </textarea>
+                <x-forms.error name="description" />
             </div>
 
         </div>
