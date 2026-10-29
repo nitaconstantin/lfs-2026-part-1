@@ -12,7 +12,8 @@
         @method('PATCH')
         <div class="col-span-full">
             <div class="mt-2">
-                <textarea class="text-white block w-full rounded-md bg-white/5 px-3" name="description" id="description" rows="5">
+                <textarea class="textarea w-full @error('description') textarea-error text-error @enderror" name="description"
+                    id="description" rows="5">
 {{ $idea->description }}
                 </textarea>
                 <x-forms.error name="description" />
@@ -20,11 +21,11 @@
 
         </div>
         <div class="mt-6 flex items-center  gap-x-3">
-            <button type="submit" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white">
+            <button type="submit" class="btn btn-primary">
                 Update
             </button>
-            <button type="submit" class="rounded-md bg-red-500 px-3 py-2 text-sm font-semibold text-white"
-                form="delete-idea-form" onclick="return confirm('Are you sure you want to delete this Idea?')">
+            <button type="submit" class="btn btn-error" form="delete-idea-form"
+                onclick="return confirm('Are you sure you want to delete this Idea?')">
                 Delete
             </button>
         </div>

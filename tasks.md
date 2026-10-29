@@ -133,3 +133,34 @@ Homework
 4. create a new component error.blade.php V
 5. create a new forms folder in your components folder and add your newly created error component V
 
+
+
+### **Form Request Classes**
+
+1. comment your validated input from your store action at first V
+2. create a new request named StoreIdeaRequest V
+3. you will find the newly created file in app/Http/Requests V
+4. anyone can do it at this moment V
+5. be careful to populate your newly method called rules with what inputs do you need V
+6. now you can change the name of default request from your store method to your newly created request which is a substitute of the default request V
+7. after that you can override your messages, creating a new function called messages V
+8. show also a hint for what you've done wrong V
+9. update your StoreIdeaRequest name to IdeaRequest and use the newly renamed file in both store and update function from your IdeaController V
+10. show the error in your edit view V
+
+
+
+### **A Brief DaisyUI Detour**
+
+1. you have to add the required cdn links to daisyui
+2. and also the cdn link which allows you to have custom themes
+3. choose the navbar and update it to what you need for your project
+4. after you add your newly navbar you can change your theme also using data-theme attribute
+5. for this time choose the dasrk theme
+6. add to your main tag the following classes {max-w-3xl; mx-auto}
+7. create a new component for your navigation but do not create another folder for this component
+8. update the links for both sizes
+9. Create a button for register page on the navbar
+10. for each idea create a card using daisyUI
+11. add error to your inputs also for border and text
+

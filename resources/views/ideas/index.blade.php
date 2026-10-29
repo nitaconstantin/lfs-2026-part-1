@@ -6,18 +6,18 @@
     {{ dd($tasks) }}
 @endif --}}
 <x-layout>
-    <h1 class="text-white text-2xl">Ideas page</h1>
-
-
     <div class="mt-6 text-white">
         @if (count($ideas))
-            <h3 class="font-bold">Your Ideas</h3>
-            <ul>
+            <h3 class="font-bold mb-6">Your Ideas</h3>
+            <ul class="mt-6 grid grid-cols-2 gap-x-6 gap-y-4">
                 @foreach ($ideas as $idea)
                     <li class="text-sm">
-                        <a href="/ideas/{{ $idea->id }}">
+                        {{-- <div class="card bg-neutral text-neutral-content w-96">
+                            <p>{{ $idea->description }}</p>
+                        </div> --}}
+                        <x-idea-card href="/ideas/{{ $idea->id }}">
                             {{ $idea->description }}
-                        </a>
+                        </x-idea-card>
                     </li>
                 @endforeach
             </ul>

@@ -4,7 +4,8 @@
         <div class="col-span-full">
             <label for="description" class="block text-sm/6 font-medium text-white">New Idea</label>
             <div class="mt-2">
-                <textarea class="text-white block w-full rounded-md bg-white/5 px-3" name="description" id="description" rows="5"></textarea>
+                <textarea class="textarea w-full @error('description') textarea-error text-error @enderror" name="description"
+                    id="description" rows="3">{{ old('description', request('description')) }}</textarea>
             </div>
             {{-- @if ($errors->has('description'))
                 <p class="text-sm text-red-500 mt-1">{{ $errors->first('description') }}</p>
@@ -18,7 +19,7 @@
             </p>
         </div>
         <div class="mt-6 flex items-center  gap-x-6">
-            <button type="submit" class="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white">
+            <button type="submit" class="btn">
                 Save
             </button>
         </div>
