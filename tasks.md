@@ -156,11 +156,35 @@ Homework
 2. and also the cdn link which allows you to have custom themes
 3. choose the navbar and update it to what you need for your project
 4. after you add your newly navbar you can change your theme also using data-theme attribute
-5. for this time choose the dasrk theme
+5. for this time choose the dark theme
 6. add to your main tag the following classes {max-w-3xl; mx-auto}
 7. create a new component for your navigation but do not create another folder for this component
 8. update the links for both sizes
 9. Create a button for register page on the navbar
 10. for each idea create a card using daisyUI
 11. add error to your inputs also for border and text
+
+
+
+### **Authentication Explained**
+
+1. create routes for create and store which point to a RegisteredUserController V
+2. create the RegisteredUserController which is inside the Auth folder, make it an empty controller V 
+3. after creating the controller you need to create the two methods create and store V
+4. create also the view for the register V
+5. be careful to center your form and change the legend of form to register V 
+6. in your newly form you need a name, email, and password field V 
+7. after that create also your form V
+8. verify if your data has been passed to the server V
+9. steps you have to do in your store method: validate the request/ create a new user/log the user in/ redirect to (/ideas) V
+10. your $request->validate(\['name' => \['required', 'string', 'max:255'],'email' => \['required', 'string', 'email', 'max:255', 'unique:users], 'password' => \['required', Password::default()]) V
+11. after you are logged in change the links in your navigation V
+12. if you click to logout button you have to redirect to the ideas page and also logout the user V
+13. create a resource SessionsController (use only create and destroy method) V
+14. add a login form V
+15. in your sessionsController you need to add store method 
+16. that method needs to validate the inputs/ attempt to login/ redirect
+17. if the credentials has failed return back() withErrors V
+18. be careful to regenerate the session before you redirect to ideas V
+19. use the @auth else @endauth method to show buttons on the navigation V
 
