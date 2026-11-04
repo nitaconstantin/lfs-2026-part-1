@@ -169,11 +169,11 @@ Homework
 ### **Authentication Explained**
 
 1. create routes for create and store which point to a RegisteredUserController V
-2. create the RegisteredUserController which is inside the Auth folder, make it an empty controller V 
+2. create the RegisteredUserController which is inside the Auth folder, make it an empty controller V
 3. after creating the controller you need to create the two methods create and store V
 4. create also the view for the register V
-5. be careful to center your form and change the legend of form to register V 
-6. in your newly form you need a name, email, and password field V 
+5. be careful to center your form and change the legend of form to register V
+6. in your newly form you need a name, email, and password field V
 7. after that create also your form V
 8. verify if your data has been passed to the server V
 9. steps you have to do in your store method: validate the request/ create a new user/log the user in/ redirect to (/ideas) V
@@ -182,9 +182,27 @@ Homework
 12. if you click to logout button you have to redirect to the ideas page and also logout the user V
 13. create a resource SessionsController (use only create and destroy method) V
 14. add a login form V
-15. in your sessionsController you need to add store method 
+15. in your sessionsController you need to add store method
 16. that method needs to validate the inputs/ attempt to login/ redirect
 17. if the credentials has failed return back() withErrors V
 18. be careful to regenerate the session before you redirect to ideas V
 19. use the @auth else @endauth method to show buttons on the navigation V
+
+
+
+### **Require Authentication with Middleware**
+
+1. at first, verify what an idea consists V
+2. if we've already had Authentication, add also a foreignIdFor a user V
+3. be careful to make the newly added column to be constrained and also cascadeOnDelete V
+4. in that point you've made a change to your migration and you have to refresh the migration V
+5. use middleware and stop someone who is not authenticated to access the ideas page V
+6. if you want to redirect a guest user to a page you can do this from bootstrap/app.php V
+7. an alternative for this rude option you can add a named route V
+8. assign a named route to your login page V
+9. create a group middleware for an auth user V
+10. create of course a group middleware for a guest V
+11. when you want to create an idea be careful to create a relation between an idea and a user
+12. in your IdeaController  be careful to add your user\_id in your store function
+13. after you do this be careful to modify in your index method $ideas variable to point to only one user
 

@@ -22,9 +22,11 @@
                 @endforeach
             </ul>
         @else
-            <p class="text-sm">You have no ideas yet. <a class="underline" href="/ideas/create">Create new Idea</a>
+            <p class="text-sm">You have no ideas yet.
             </p>
         @endif
+
+        <a class="underline block mt-6" href="/ideas/create">Create new Idea</a>
     </div>
 
 
