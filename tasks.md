@@ -202,7 +202,17 @@ Homework
 8. assign a named route to your login page V
 9. create a group middleware for an auth user V
 10. create of course a group middleware for a guest V
-11. when you want to create an idea be careful to create a relation between an idea and a user
-12. in your IdeaController  be careful to add your user\_id in your store function
-13. after you do this be careful to modify in your index method $ideas variable to point to only one user
+11. when you want to create an idea be careful to create a relation between an idea and a user V
+12. in your IdeaController  be careful to add your user\_id in your store function V
+13. after you do this be careful to modify in your index method $ideas variable to point to only one user V
+
+
+
+### **Eloquent Relationship**
+
+1. create relationships between an idea and a user but do it bidirectional
+2. update your index method from your IdeaController to reflects the newly created relationship
+3. after you've modified your index method you can also update your code in your store method and after that you can delete the row of user\_id
+
+
 

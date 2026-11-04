@@ -15,10 +15,11 @@ class IdeaController extends Controller
     public function index()
     {
         // $ideas = Idea::all();
-        $ideas = Idea::query()
-                ->where([
-                    'user_id' => Auth::id(),
-                ])->get();
+        // $ideas = Idea::query()
+        //         ->where([
+        //             'user_id' => Auth::id(),
+        //         ])->get();
+        $ideas = Auth::user()->ideas;
     
     
         return view('ideas.index', [
@@ -43,9 +44,10 @@ class IdeaController extends Controller
         // $request->validate([
         //     'description' => ['required', 'min:5']
         // ]);
-        Idea::create([
+        // Idea::create([
+        Auth::user()->ideas()->create([
             'description' => $request->description,
-            'user_id' => Auth::id(),
+            // 'user_id' => Auth::id(),
             'state' => 'pending'
         ]);
 
