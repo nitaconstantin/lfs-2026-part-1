@@ -226,3 +226,13 @@ Homework
 6. make also the route to be private V
 7. in your gate rule, now you have to return a response(Auth/Access) V
 
+
+
+### **Authorization Using Policies**
+
+1. make a new policy name IdeaPolicy use the corresponding model V
+2. in your newly created IdeaPolicy keep only the update method V
+3. comment your created route for /ideas page and also delete the Gate's Rule from your AppServiceProvider V
+4. create also a create policy V
+5. use your update policy method for every actions in your IdeaController V
+

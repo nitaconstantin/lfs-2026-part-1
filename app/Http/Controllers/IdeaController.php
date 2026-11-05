@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\IdeaRequest;
 use App\Models\Idea;
+use Illuminate\Auth\Access\Gate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate as FacadesGate;
 
 class IdeaController extends Controller
 {
@@ -33,6 +35,7 @@ class IdeaController extends Controller
      */
     public function create()
     {
+        FacadesGate::authorize('create', Idea::class);
         return view('ideas.create');
     }
 
@@ -59,6 +62,7 @@ class IdeaController extends Controller
      */
     public function update(IdeaRequest $request, Idea $idea)
     {
+       FacadesGate::authorize('update', $idea);
         $idea->update([
             'description' => $request->description,
         ]);
@@ -71,6 +75,7 @@ class IdeaController extends Controller
      */
     public function show(Idea $idea)
     {
+        FacadesGate::authorize('update', $idea);
         return view('ideas.show',[
             'idea' =>$idea
         ]);
@@ -81,6 +86,7 @@ class IdeaController extends Controller
      */
     public function edit(Idea $idea)
     {
+        FacadesGate::authorize('update', $idea);
         return view('ideas.edit', [
             'idea' => $idea
         ]);
@@ -93,6 +99,7 @@ class IdeaController extends Controller
      */
     public function destroy(Idea $idea)
     {
+        FacadesGate::authorize('update', $idea);
         $idea->delete();
         return redirect('/ideas');
     }
