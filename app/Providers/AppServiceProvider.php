@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\User;
+use Illuminate\Auth\Access\Gate;
+use Illuminate\Auth\Access\Response;
+use Illuminate\Support\Facades\Gate as FacadesGate;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +23,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // create your first gate
+       FacadesGate::define('view-admin', function(User $user){
+            // return $user->id === 1;
+            return $user->isAdmin() ? Response::allow() : Response::denyAsNotFound();
+       });
     }
 }

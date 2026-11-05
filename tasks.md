@@ -210,9 +210,19 @@ Homework
 
 ### **Eloquent Relationship**
 
-1. create relationships between an idea and a user but do it bidirectional
-2. update your index method from your IdeaController to reflects the newly created relationship
-3. after you've modified your index method you can also update your code in your store method and after that you can delete the row of user\_id
+1. create relationships between an idea and a user but do it bidirectional V
+2. update your index method from your IdeaController to reflects the newly created relationship V
+3. after you've modified your index method you can also update your code in your store method and after that you can delete the row of user\_id V
 
 
+
+### **Authorization Using Gates**
+
+1. first add to your navigation list another link to an administrator page(/admin) V
+2. add the same link to both of your lists V
+3. create a route for that private area, and for that route, set only a text message like "Private admin only area" V
+4. after that in your AppServiceProvider you have to define a gate rule which allows every users to see that area V
+5. now, the next step is to use that directive you've already created in your navigation component
+6. make also the route to be private V
+7. in your gate rule, now you have to return a response(Auth/Access) V
 
