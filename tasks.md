@@ -236,3 +236,12 @@ Homework
 4. create also a create policy V
 5. use your update policy method for every actions in your IdeaController V
 
+
+
+### **Frontend Asset Building with Vite**
+
+1. remove all of your references to a CDN V
+2. verify if your project has a vite.config.js file V
+3. be careful to reference the vite.config.js in your layout file V
+4. install also daisyUI V
+
