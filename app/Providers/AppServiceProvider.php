@@ -24,9 +24,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         // create your first gate
-       FacadesGate::define('view-admin', function(User $user){
-            // return $user->id === 1;
-            // return $user->isAdmin() ? Response::allow() : Response::denyAsNotFound();
-       });
+        FacadesGate::define('view-admin', function(User $user){
+            return $user->id === 1 ? Response::allow() : Response::denyAsNotFound();
+        });
     }
 }

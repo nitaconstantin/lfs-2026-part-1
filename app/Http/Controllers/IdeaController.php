@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\IdeaRequest;
 use App\Models\Idea;
-use Illuminate\Auth\Access\Gate;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate as FacadesGate;
@@ -33,9 +33,9 @@ class IdeaController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(?Idea $idea)
     {
-        FacadesGate::authorize('create', Idea::class);
+        FacadesGate::authorize('create', $idea);
         return view('ideas.create');
     }
 

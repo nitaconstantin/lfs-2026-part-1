@@ -13,4 +13,6 @@ class Idea extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    
 }
