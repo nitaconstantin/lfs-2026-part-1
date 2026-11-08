@@ -245,3 +245,15 @@ Homework
 3. be careful to reference the vite.config.js in your layout file V
 4. install also daisyUI V
 
+
+
+### **Notifications**
+
+1. find your method where you want to send a notification V
+2. verify from where the notification comes V
+3. create a notifications-table and migrate V
+4. create a new notification named IdeaPublished V
+5. after you create the new notification you can modify the shape of your notification V
+6. after that you need to accept an Idea into your contructor, your Idea parameter should be protected V
+7. in your IdeaController you have to notify the user V
+

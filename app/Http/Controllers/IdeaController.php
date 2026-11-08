@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\IdeaRequest;
 use App\Models\Idea;
-
+use App\Notifications\IdeaPublished;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate as FacadesGate;
@@ -48,11 +48,14 @@ class IdeaController extends Controller
         //     'description' => ['required', 'min:5']
         // ]);
         // Idea::create([
-        Auth::user()->ideas()->create([
+        $idea = Auth::user()->ideas()->create([
             'description' => $request->description,
             // 'user_id' => Auth::id(),
             'state' => 'pending'
         ]);
+
+        Auth::user()
+            ->notify(new IdeaPublished($idea));
 
         return redirect('/ideas');
     }
